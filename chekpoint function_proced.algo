@@ -1,0 +1,91 @@
+PROCEDURE dot_product(V1,V2 : ARRAY_OF INTEGER , product :INTEGER) 
+VAR
+    
+     var n = 3:INTEGER
+    product=0 , INTEGER
+BEGIN
+    FOR i FROM 0 TO n   DO
+        product =product+(V1[i]*V2[i])
+    END_FOR
+        read(product);
+END
+ALGORITHM vecteurs_orthogonale
+VAR
+ vecteur1: ARRAY_OF INTEGER[3];
+ vecteur2 :  ARRAY_OF INTEGER[3];
+ var : n
+BEGIN
+  write("donner le size de tableau") ;
+  read(n) ; 
+  FOR i FROM 1 TO n   DO{
+    SWITCH (i) DO
+        case 1 : write("donnerle cordoner sur l'axe x de vecteur ");
+                read(x);
+        case 2 :write("donnerle cordoner sur l'axe y de vecteur ");
+                read(y);
+      case 3 :write("donnerle cordoner sur l'axe Z de vecteur ");
+                read(Z);
+     END_SWITCH 
+     i++
+
+   
+  }
+    
+  END_FOR
+   read(vecteur1 )
+    read(vecteur2)
+    dot_product(vecteur1,vecteur2, produit)
+    if produit =0 {
+    write("product =" product : "le deux vecteurs sont orthogonales")
+}
+    
+END
+ 
+ // usinig dot_product as a function 
+ 
+
+    
+ALGORITHM vecteurs_orthogonale
+    FUNCTION dot_product(V1,v2 ,product) : INTEGER
+      var n = 3:INTEGER
+    
+    BEGIN
+    FOR i FROM 0 TO n   DO
+        product =product+(V1[i]*V2[i])
+    END_FOR
+       return product
+    END
+VAR
+ vecteur1: ARRAY_OF INTEGER[3];
+ vecteur2 :  ARRAY_OF INTEGER[3];
+ var : n
+BEGIN
+  write("donner le size de tableau") ;
+  read(n) ; 
+  FOR i FROM 1 TO n   DO{
+    SWITCH (i) DO
+        case 1 : write("donnerle cordoner sur l'axe x de vecteur ");
+                read(x);
+        case 2 :write("donnerle cordoner sur l'axe y de vecteur ");
+                read(y);
+      case 3 :write("donnerle cordoner sur l'axe Z de vecteur ");
+                read(Z);
+     END_SWITCH 
+     i++
+
+   
+  }
+    
+  END_FOR
+   read(vecteur1 )
+    read(vecteur2)
+ dot_product(vecteur1,vecteur2, produit)
+    if produit =0 {
+    write("product =" product : "le deux vecteurs sont orthogonales")
+}
+    
+END
+
+ 
+       
+  
